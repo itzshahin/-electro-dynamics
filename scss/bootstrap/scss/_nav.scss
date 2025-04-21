@@ -1,0 +1,102 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: #000;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: #e5e5e5;
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: #555;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+/* Tabs */
+.nav-tabs {
+  border-bottom: none;
+
+  .nav-link {
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      color: #e5e5e5;
+    }
+
+    &.disabled {
+      color: #444;
+      background-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: #aaa;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+  }
+}
+
+/* Pills */
+.nav-pills {
+  .nav-link {
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: #000;
+    background-color: #fff;
+  }
+}
+
+/* Justified & Fill */
+.nav-fill,
+.nav-justified {
+  > .nav-link,
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .nav-item .nav-link {
+    width: 100%;
+  }
+}
+
+/* Tabbable content */
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
